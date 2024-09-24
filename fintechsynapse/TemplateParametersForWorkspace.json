@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "fintechsynapse"
+		},
+		"SQLDatabase_password": {
+			"value": ""
+		},
+		"fintechsynapse-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:fintechsynapse.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"FintechDataLake_properties_typeProperties_url": {
+			"value": "https://airbnbdatapro.dfs.core.windows.net/"
+		},
+		"SQLDatabase_properties_typeProperties_server": {
+			"value": "fintech-sql-server.database.windows.net"
+		},
+		"SQLDatabase_properties_typeProperties_database": {
+			"value": "fintech-sql-database"
+		},
+		"SQLDatabase_properties_typeProperties_userName": {
+			"value": "adminfintech"
+		},
+		"fintechsynapse-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://airbnbdatapro.dfs.core.windows.net"
+		}
+	}
+}
